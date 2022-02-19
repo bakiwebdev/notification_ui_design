@@ -43,6 +43,9 @@ const NotificationContainer = () => {
       <div className="w-full h-20 my-4 flex items-center justify-between">
         {/* <Icon icon={<FaWifi className='h-7 w-7'/>}/> */}
         {icons.map((icon, index) => {
+          if(index === 2){
+            return <Icon icon={icon} error/>
+          }
           return <Icon key={index} icon={icon} />;
         })}
       </div>
